@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Portal - Karmic Canteen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="welcome-container">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1 class="title">Choose Your Portal</h1>
+      <p class="subtitle">Select whether you are an Employee or an Admin</p>
+      <div class="button-group">
+        <button class="btn" id="employeeBtn">Employee</button>
+        <button class="btn" id="adminBtn">Admin</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Employee button
+    document.getElementById("employeeBtn").addEventListener("click", () => {
+      const container = document.querySelector(".welcome-container");
+      container.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "employee.html";
+      }, 1000);
+    });
+
+    // Admin button
+    document.getElementById("adminBtn").addEventListener("click", () => {
+      const container = document.querySelector(".welcome-container");
+      container.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = "admin.html";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
